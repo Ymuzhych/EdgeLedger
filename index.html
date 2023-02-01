@@ -11,17 +11,17 @@
 </head>
 <body id="home">
 <header class="hero">
-    <div id="navbar" class="navbar">
+    <div id="navbar" class="navbar top">
         <h1 class="logo">
            <span class="text-primary"><i class="fas fa-book-open"></i>Edge</span>Ledger
         </h1>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#home">About</a></li>
-                <li><a href="#home">Cases</a></li>
-                <li><a href="#home">Blog</a></li>
-                <li><a href="#home">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#cases">Cases</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </div>
@@ -119,7 +119,7 @@
                     <h4>March 10 2023</h4>
                     <h2>Blog Post One</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, ipsum beatae tempore vitae soluta quisquam nam eaque corrupti deleniti repellendus!</p>
-                    <a href="#" class="btn btn-outline">
+                    <a href="blog.html" class="btn btn-outline">
                         <i class="fas fa-chevron"></i>
                         Read Our Blog
                     </a>
@@ -192,5 +192,15 @@
     </div>
     <p>Copyright &copy; 2023 - EdgeLedger</p>
 </footer>
+<script>
+    const navbar = document.getElementById('navbar')
+    window.onscroll = function() {
+        if(window.pageYoffset >100) {
+            navbar.classList.remove('top');
+        } else {
+            navbar.classList.add('top')
+        }
+    }
+</script>
 </body>
 </html>
